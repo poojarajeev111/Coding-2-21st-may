@@ -4,13 +4,13 @@
 
 struct node 
 {
-    int num;                    //Data of the node
-    struct node *nextptr;       //Address of the node
+    int num;                    
+    struct node *nextptr;       
 }*stnode;
 
-void createNodeList(int n);     //function to create the list
-void reverseDispList();         //function to convert the list in reverse
-void displayList();             //function to display the list
+void createNodeList(int n);     
+void reverseDispList();         
+void displayList();             
 
 int main()
 {
@@ -57,9 +57,9 @@ void createNodeList(int n)
             {
                 printf(" Input data for node %d : ", i);
                 scanf(" %d", &num);
-                fnNode->num = num;      // links the num field of fnNode with num
-                fnNode->nextptr = NULL; // links the address field of fnNode with NULL
-                tmp->nextptr = fnNode; // links previous node i.e. tmp to the fnNode
+                fnNode->num = num;      
+                fnNode->nextptr = NULL; 
+                tmp->nextptr = fnNode; 
                 tmp = tmp->nextptr;
             }
         }
@@ -76,7 +76,7 @@ void reverseDispList()
         curNode = stnode->nextptr;
         stnode = stnode->nextptr;
  
-        prevNode->nextptr = NULL; //convert the first node as last
+        prevNode->nextptr = NULL; 
  
         while(stnode != NULL)
         {
@@ -86,7 +86,7 @@ void reverseDispList()
             prevNode = curNode;
             curNode = stnode;
         }
-        stnode = prevNode; //convert the last node as head
+        stnode = prevNode; 
     }
 }
 
@@ -102,8 +102,8 @@ void displayList()
         tmp = stnode;
         while(tmp != NULL)
         {
-            printf(" Data = %d\n", tmp->num);   // prints the data of current node
-            tmp = tmp->nextptr;                 // advances the position of current node
+            printf(" Data = %d\n", tmp->num);   
+            tmp = tmp->nextptr;                
         }
     }
 }
